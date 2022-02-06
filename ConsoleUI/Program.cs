@@ -39,12 +39,24 @@ namespace ConsoleUI
             }
 
             Console.WriteLine("************************************");
-
+            
+            
             CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-            foreach (var category in categoryManager.GetAll())
+            var result2 = categoryManager.GetAll();
+
+            if (result2.Success == true)
             {
-                Console.WriteLine(category.CategoryName);
+                foreach (var category in result2.Data)
+                {
+                    Console.WriteLine(category.CategoryName);
+                }
             }
+            else
+            {
+                Console.WriteLine(result2.Message);
+            }
+
+           
 
         }
     }
