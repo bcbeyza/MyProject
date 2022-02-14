@@ -38,7 +38,7 @@ namespace ConsoleUI
                 Console.WriteLine(product.ProductName);
             }
 
-            Console.WriteLine("************************************");
+            Console.WriteLine("***************************************");
             
             
             CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
