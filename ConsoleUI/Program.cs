@@ -29,7 +29,7 @@ namespace ConsoleUI
 
             
 
-            Console.WriteLine("************************************");
+            Console.WriteLine("*********************************");
 
             ProductManager productManager2 = new ProductManager(new EfProductDal(),new CategoryManager(new EfCategoryDal()));
 
